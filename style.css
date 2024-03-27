@@ -1,0 +1,224 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    --primary:#5d99d1;
+    --error:#ec6262;
+}
+.container{
+    margin:1.9rem auto;
+    width: 80%;
+    height: 90vh;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    border: 1px solid rgb(87, 79, 79);
+   
+}
+
+h1{
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: cap;
+    color: var(--primary);
+    margin-top: 2%;
+}
+
+/* table css starts */
+
+.content-table{
+    border-collapse: collapse;
+    width: 35rem;
+    margin: 0 auto;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+   
+}
+
+.table-wrapper{
+    /* width: 50%; */
+    margin: auto;
+    height: 220px;
+    overflow-y: auto;
+    margin-bottom: 50px;
+}
+thead{
+    position:sticky;
+    top:0px;
+}
+
+.content-table th{
+    cursor: pointer;
+}
+
+.content-table .th-sort-asc::after {
+	content: "\25b4";
+}
+
+.content-table .th-sort-desc::after {
+	content: "\25be";
+}
+
+.content-table .th-sort-asc::after,
+.content-table .th-sort-desc::after {
+	margin-left: 5px;
+}
+
+.content-table .th-sort-asc,
+.content-table .th-sort-desc {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.content-table thead tr{
+background-color: var(--primary);
+color: white;
+font-weight: bold;
+font-size: 16px;
+
+}
+/* 
+
+.table-wrapper{
+    overflow-y: auto;
+    max-height: 60vh;
+    border: 1px solid black;
+    
+} */
+
+.table-wrapper{
+    margin-top: 1.9rem;
+}
+.content-table th,
+.content-table td{
+    padding: 12px 15px ;
+    text-align: center;
+
+
+}
+
+.content-table td{
+    font-size: 14px;
+}
+.content-table tbody tr{
+    border-bottom: 1px solid #dddd
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid var(--primary);
+}
+.content-table thead .actions{
+    width: 205px;
+}
+.scrollable-area{
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+}
+ button{
+  padding: 8px 12px;
+  width: 80px;
+  outline: none;
+  border-radius: 5px;
+  border: transparent;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.content-table tbody td .buttons .edit-btn{
+    background-color: #f7b30a;
+}
+.content-table tbody td .buttons .dlt-btn{
+    background-color: #ee2f0d;
+}
+.content-table tbody td .buttons{
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* table css ends */
+
+
+/* form css starts */
+.form-wrapper{
+    margin: 2% auto;
+    width: 50rem;
+}
+.form-content{
+  
+    display:flex ;
+    
+    justify-content: space-between;
+    
+}
+
+form input{
+    padding: 8px 12px;
+    outline: none;
+    font-size: 14px;
+    width: 10rem;
+    border: 2px solid rgb(177, 175, 175);
+    border-bottom:2px solid var(--primary);
+    border-radius: 5px 5px 0 0;
+
+}
+.addButton{
+    width:90px ;
+    max-height: 36px;
+    padding: 8px 12px;
+    background-color: #29bc69;
+}
+
+form select{
+    padding: 8px 12px;
+    width: 10rem;
+    font-size: 14px;
+    height: 36px;
+    border: 2px solid rgb(177, 175, 175);
+    outline: none;
+    border-bottom:2px solid var(--primary);
+    border-radius: 5px 5px 0 0;
+
+
+}
+
+.form-content .inputNErr{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width:120px;
+    height: 70px;
+}
+/* errors starts here */
+
+.inputNErr small{
+    color: var(--error);
+    visibility: hidden;
+}
+.inputNErr.error input,Select{
+    border: 2px solid var(--error);
+
+}
+
+.inputNErr.error Select{
+    border: 2px solid var(--error);
+    visibility: visible;
+
+}
+.inputNErr.error small{
+    margin-top: 8px;
+    visibility: visible;
+}

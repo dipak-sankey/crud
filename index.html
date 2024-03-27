@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Employee Management System</h1>
+        <!-- Employee Table starts -->
+        <div class="table-wrapper">
+            <table class="content-table" id="empTable">
+                <thead>
+                    <tr>
+                        <th>EID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th class="actions">Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody">
+
+
+                </tbody>
+
+            </table>
+        </div>
+        <!-- Employee Table ends -->
+
+        <!-- registration form starts  -->
+        <div class="form-wrapper">
+            <form action="" class="form-content" id ="inputform" onsubmit="onFormSubmit()">
+                <div class="inputNErr ">
+                    <input type="number" placeholder="ID:- 01 to 999999" id="empId">
+                    <!-- <small id="empIderrors"></small> -->
+
+                </div>
+                <div class="inputNErr">
+                    <input type="text" placeholder="Name: John Doe" id="fullName">
+                    <!-- <small id="fullNameErrors"></small> -->
+
+                </div>
+                <div class="inputNErr">
+                    <input type="number" name="" placeholder="Age: 18 to 65" id="age">
+                    <!-- <small></small> -->
+                </div>
+                <div class="inputNErr">
+                    <Select id="gender">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Others">Others</option>
+                    </Select>
+                    <!-- <small></small> -->
+                </div>
+
+                <button type="submit" class="addButton" id="addUpdatebtn">+ Add</button>
+            </form>
+        </div>
+
+
+        <!-- registration form ends  -->
+
+
+    </div>
+</body>
+<script type="text/javascript" src="./scripts/script.js"></script>
+
+</html>
